@@ -1,8 +1,10 @@
+import PlaceContentCenter from '../components/Fragments/PlaceContentCenter';
+
 const LoginPage = () => {
    return (
-      <div>
-         <h1>Login Page</h1>
-      </div>
+      <PlaceContentCenter>
+         
+      </PlaceContentCenter>
    );
 };
 
