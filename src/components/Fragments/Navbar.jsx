@@ -1,18 +1,28 @@
 import { IconBaselineDensitySmall, IconX } from '@tabler/icons-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
    const [showMenu, setShowMenu] = useState(false);
+   const navigate = useNavigate();
+   const access_token = localStorage.getItem('access_token');
+
+   const logout = () => {
+      localStorage.removeItem('access_token');
+      navigate('/home');
+   };
 
    const toggleMenu = () => {
       setShowMenu(!showMenu);
    };
 
+   const closeMenu = () => {
+      setShowMenu(false);
+   };
+
    const navList = [
       { to: '/home', text: 'Home' },
       { to: '/users', text: 'Users' },
-      { to: '/login', text: 'Login' },
    ];
 
    return (
@@ -21,7 +31,7 @@ const Navbar = () => {
             <div className='relative flex items-center justify-between h-24'>
                <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
                   <div className='flex-shrink-0 flex items-center'>
-                     <span className='text-white font-bold '>Reqes API</span>
+                     <span className='text-white font-bold'>Reqes API</span>
                   </div>
                   <div className='hidden sm:block sm:ml-6'>
                      <div className='flex space-x-4'>
@@ -34,10 +44,27 @@ const Navbar = () => {
                                     ? 'text-gray-300 bg-red-600 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                     : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                               }
+                              onClick={closeMenu}
                            >
                               {item.text}
                            </Link>
                         ))}
+                        {access_token ? (
+                           <Link
+                              to={'/home'}
+                              className='text-gray-300 bg-red-600 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                              onClick={logout}
+                           >
+                              Logout
+                           </Link>
+                        ) : (
+                           <Link
+                              to={'/login'}
+                              className='text-gray-300 bg-red-600 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                           >
+                              Login
+                           </Link>
+                        )}
                      </div>
                   </div>
                </div>
@@ -69,10 +96,27 @@ const Navbar = () => {
                                  ? 'text-gray-300 bg-red-600 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                  : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                            }
+                           onClick={closeMenu}
                         >
                            {item.text}
                         </Link>
                      ))}
+                     {access_token ? (
+                        <Link
+                           to={'/home'}
+                           className='text-gray-300 bg-red-600 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                           onClick={logout}
+                        >
+                           Logout
+                        </Link>
+                     ) : (
+                        <Link
+                           to={'/login'}
+                           className='text-gray-300 bg-red-600 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                        >
+                           Login
+                        </Link>
+                     )}
                   </div>
                </div>
             )}
