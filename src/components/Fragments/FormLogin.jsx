@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { login } from '../Utils/apiUtils';
 import Card from './Card';
 import Button from '../Elements/Button';
 import Label from '../Elements/Label';
 import Input from '../Elements/Input';
-import { useState } from 'react';
-import { login } from '../Utils/apiUtils';
 
 const FormLogin = () => {
    const [notif, setNotif] = useState('');

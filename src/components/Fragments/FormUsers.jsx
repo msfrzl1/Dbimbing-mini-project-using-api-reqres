@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import Card from './Card';
-import { getUsers } from '../Utils/apiUtils';
-import Button from '../Elements/Button';
 import { IconUserScan } from '@tabler/icons-react';
+import { useEffect, useState } from 'react';
+import { getUsers } from '../Utils/apiUtils';
 import { Link } from 'react-router-dom';
+import Card from './Card';
+import Button from '../Elements/Button';
 
 const FormUser = () => {
    const [users, setUsers] = useState([]);
