@@ -1,10 +1,11 @@
 import FormUser from '../components/Fragments/FormUsers';
+import Auth from '../components/Layouts/Auth';
 
 const UsersPage = () => {
    return (
-      <div>
+      <Auth>
          <FormUser></FormUser>
-      </div>
+      </Auth>
    );
 };
 
