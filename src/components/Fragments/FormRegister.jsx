@@ -5,6 +5,7 @@ import Card from './Card';
 import Button from '../Elements/Button';
 import Label from '../Elements/Label';
 import Input from '../Elements/Input';
+import { IconRegistered } from '@tabler/icons-react';
 
 const FormRegister = () => {
    const [notif, setNotif] = useState('');
@@ -82,10 +83,10 @@ const FormRegister = () => {
                </div>
             </Card.Body>
             <Card.Footer>
-               <Button
-                  text={loading ? 'Loading...' : 'Register'}
-                  className='bg-cyan-600 hover:bg-cyan-700'
-               />
+               <Button className='bg-cyan-600 hover:bg-cyan-700'>
+                  <IconRegistered />
+                  {loading ? 'Loading...' : 'Register'}
+               </Button>
                {notif && (
                   <p
                      className={
