@@ -45,7 +45,7 @@ function AutoPlay() {
 
    return (
       <Auth>
-         <div className='slider-container mx-auto max-w-7xl '>
+         <div className='slider-container mx-auto max-w-7xl mb-10'>
             <Slider {...settings}>
                {imageDummy.map((image) => (
                   <Card
