@@ -8,16 +8,18 @@ const FormRegister = () => {
    return (
       <Card>
          <Card.Title>
-            <h1>Register for new account !</h1>
-            <p>
-               Alredy have an account?{' '}
-               <Link
-                  className='link'
-                  to='/login'
-               >
-                  Login
-               </Link>
-            </p>
+            <div>
+               <h1>Register for new account !</h1>
+               <p>
+                  Alredy have an account?{' '}
+                  <Link
+                     className='link'
+                     to='/login'
+                  >
+                     Login
+                  </Link>
+               </p>
+            </div>
          </Card.Title>
          <Card.Body>
             <div className='mb-3'>

@@ -9,16 +9,18 @@ const FormLogin = () => {
    return (
       <Card>
          <Card.Title>
-            <h1>Welcome back friend</h1>
-            <p>
-               Don't have an account?{' '}
-               <Link
-                  className='link'
-                  to='/register'
-               >
-                  Register
-               </Link>
-            </p>
+            <div>
+               <h1>Welcome back friend</h1>
+               <p>
+                  Don't have an account?{' '}
+                  <Link
+                     className='link'
+                     to='/register'
+                  >
+                     Register
+                  </Link>
+               </p>
+            </div>
          </Card.Title>
          <Card.Body>
             <div className='mb-3'>
