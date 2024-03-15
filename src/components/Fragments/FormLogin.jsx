@@ -6,6 +6,7 @@ import Card from './Card';
 import Button from '../Elements/Button';
 import Label from '../Elements/Label';
 import Input from '../Elements/Input';
+import { IconLogin } from '@tabler/icons-react';
 
 const FormLogin = () => {
    const [notif, setNotif] = useState('');
@@ -84,10 +85,10 @@ const FormLogin = () => {
                <Link>forgot password?</Link>
             </Card.Body>
             <Card.Footer>
-               <Button
-                  text={loading ? 'Loading...' : 'Login'}
-                  className='bg-cyan-600 hover:bg-cyan-700'
-               ></Button>
+               <Button className='bg-cyan-600 hover:bg-cyan-700'>
+                  <IconLogin />
+                  {loading ? 'Loading...' : 'Login'}
+               </Button>
                {notif && (
                   <p
                      className={
