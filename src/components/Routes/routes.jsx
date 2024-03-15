@@ -3,6 +3,7 @@ import LoginPage from '../../pages/login';
 import RegisterPage from '../../pages/register';
 import UserDetailPage from '../../pages/userDetail';
 import UsersPage from '../../pages/users';
+import ProtectedRoute from './ProtectedRoutes';
 
 export const routelist = [
    {
@@ -23,7 +24,11 @@ export const routelist = [
    },
    {
       path: '/users',
-      element: <UsersPage />,
+      element: (
+         <ProtectedRoute>
+            <UsersPage />
+         </ProtectedRoute>
+      ),
    },
    {
       path: '/users/:id',
