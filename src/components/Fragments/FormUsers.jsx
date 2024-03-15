@@ -3,6 +3,7 @@ import Card from './Card';
 import { getUsers } from '../Utils/apiUtils';
 import Button from '../Elements/Button';
 import { IconUserScan } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
 
 const FormUser = () => {
    const [users, setUsers] = useState([]);
@@ -39,10 +40,12 @@ const FormUser = () => {
                      </div>
                   </Card.Body>
                   <Card.Footer>
-                     <Button className='bg-indigo-600'>
-                        <IconUserScan />
-                        View Profile
-                     </Button>
+                     <Link to={`/users/${user.id}`}>
+                        <Button className='bg-indigo-600'>
+                           <IconUserScan />
+                           View Profile
+                        </Button>
+                     </Link>
                   </Card.Footer>
                </Card>
             </div>
