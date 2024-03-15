@@ -1,8 +1,13 @@
-# React + Vite
+Dbimbing-mini-project-using-api-reqres Membuat halaman website dengan tema user web menggunakan React.Js dengan memanfaatkan API https://reqres.in/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+daftar library =
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. tailwind 3.4
+2. axios 1.6.7
+3. tabler/icons-react 3.0.1
+4. tabler/core 1.0.0-beta20
+5. tabler/icons 3.0.1
+6. clsx 2.1.0
+7. react 18.2.0
+8. react-dom 18.2.0
+9. react-router-dom 6.22.3
