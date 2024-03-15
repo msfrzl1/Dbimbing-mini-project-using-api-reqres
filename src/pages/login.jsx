@@ -1,11 +1,14 @@
 import FormLogin from '../components/Fragments/FormLogin';
 import PlaceContentCenter from '../components/Fragments/PlaceContentCenter';
+import Auth from '../components/Layouts/Auth';
 
 const LoginPage = () => {
    return (
-      <PlaceContentCenter>
-         <FormLogin />
-      </PlaceContentCenter>
+      <Auth>
+         <PlaceContentCenter>
+            <FormLogin />
+         </PlaceContentCenter>
+      </Auth>
    );
 };
 
