@@ -44,3 +44,12 @@ export const getUsers = async (setUser) => {
       setUser(err?.message);
    }
 };
+
+export const userDetail = async (setUser, id) => {
+   try {
+      const res = await axios.get(`https://reqres.in/api/users/${id}`);
+      setUser(res?.data?.data);
+   } catch (err) {
+      setUser(err?.message);
+   }
+};
