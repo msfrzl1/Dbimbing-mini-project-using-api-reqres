@@ -7,4 +7,26 @@
    font-weight: 600;
    justify-content: center;
    align-items: center;
+   gap: 5px;
+}
+
+p {
+   font-size: 14px;
+   font-weight: 400;
+   color: #7c7c7c;
+}
+
+h1 {
+   font-size: 28px;
+   font-weight: 900;
+}
+
+.link {
+   color: blue;
+   font-weight: 600;
+   font-size: 14px;
+}
+
+.link:hover {
+   text-decoration: underline;
 }

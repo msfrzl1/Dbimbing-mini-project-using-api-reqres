@@ -1,11 +1,7 @@
 import PlaceContentCenter from '../components/Fragments/PlaceContentCenter';
 
 const LoginPage = () => {
-   return (
-      <PlaceContentCenter>
-         
-      </PlaceContentCenter>
-   );
+   return <PlaceContentCenter></PlaceContentCenter>;
 };
 
 export default LoginPage;

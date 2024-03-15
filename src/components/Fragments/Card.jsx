@@ -15,7 +15,7 @@ const Body = ({ children }) => {
 };
 
 const Footer = ({ children }) => {
-   return <div className='bg-slate-50 p-4'>{children}</div>;
+   return <div className='p-4'>{children}</div>;
 };
 
 Card.Title = Title;
