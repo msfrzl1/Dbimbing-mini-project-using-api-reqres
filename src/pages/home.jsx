@@ -1,8 +1,10 @@
+import Auth from '../components/Layouts/Auth';
+
 const HomePage = () => {
    return (
-      <div>
+      <Auth>
          <h1>Home Page</h1>
-      </div>
+      </Auth>
    );
 };
 
