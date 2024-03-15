@@ -1,21 +1,35 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Card from './Card';
 import Button from '../Elements/Button';
 import Label from '../Elements/Label';
 import Input from '../Elements/Input';
 import { useState } from 'react';
+import { login } from '../Utils/apiUtils';
 
 const FormLogin = () => {
+   const [notif, setNotif] = useState('');
+   const [loading, setLoading] = useState(false);
    const [form, setForm] = useState({
       email: '',
       password: '',
    });
+   const navigate = useNavigate();
 
    const onChange = (e) => {
       setForm({
          ...form,
          [e.target.name]: e.target.value,
+      });
+   };
+
+   const handleLogin = (e) => {
+      e.preventDefault();
+      login(form, navigate, setLoading, (message) => {
+         setNotif(message);
+         setTimeout(() => {
+            setNotif('');
+         }, 2000);
       });
    };
 
@@ -35,7 +49,7 @@ const FormLogin = () => {
                </p>
             </div>
          </Card.Title>
-         <form>
+         <form onSubmit={handleLogin}>
             <Card.Body>
                <div className='mb-3'>
                   <Label
@@ -69,13 +83,24 @@ const FormLogin = () => {
                </div>
                <Link>forgot password?</Link>
             </Card.Body>
+            <Card.Footer>
+               <Button
+                  text={loading ? 'Loading...' : 'Login'}
+                  className='bg-cyan-600 hover:bg-cyan-700'
+               ></Button>
+               {notif && (
+                  <p
+                     className={
+                        notif === 'Login Success'
+                           ? 'text-green-500 flex items-center justify-center'
+                           : 'text-red-500 flex items-center justify-center'
+                     }
+                  >
+                     {notif}
+                  </p>
+               )}
+            </Card.Footer>
          </form>
-         <Card.Footer>
-            <Button
-               text='Login'
-               className='bg-cyan-600 hover:bg-cyan-700'
-            ></Button>
-         </Card.Footer>
       </Card>
    );
 };
