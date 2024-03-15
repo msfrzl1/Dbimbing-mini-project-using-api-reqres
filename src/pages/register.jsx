@@ -1,8 +1,11 @@
+import FormRegister from '../components/Fragments/FormRegister';
+import PlaceContentCenter from '../components/Fragments/PlaceContentCenter';
+
 const RegisterPage = () => {
    return (
-      <div>
-         <h1>Register Page</h1>
-      </div>
+      <PlaceContentCenter>
+         <FormRegister />
+      </PlaceContentCenter>
    );
 };
 
