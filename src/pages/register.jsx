@@ -1,11 +1,14 @@
 import FormRegister from '../components/Fragments/FormRegister';
 import PlaceContentCenter from '../components/Fragments/PlaceContentCenter';
+import Auth from '../components/Layouts/Auth';
 
 const RegisterPage = () => {
    return (
-      <PlaceContentCenter>
-         <FormRegister />
-      </PlaceContentCenter>
+      <Auth>
+         <PlaceContentCenter>
+            <FormRegister />
+         </PlaceContentCenter>
+      </Auth>
    );
 };
 
