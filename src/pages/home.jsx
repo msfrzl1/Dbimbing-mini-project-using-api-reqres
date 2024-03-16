@@ -19,27 +19,23 @@ function AutoPlay() {
    const imageDummy = [
       {
          id: 1,
-         image: '1.jpeg',
+         image: 'https://files.realpython.com/media/Using-Flask-Login-for-User-Management-with-Flask_Watermarked.4ebd83dca67a.jpg',
          title: 'The title of the image 1',
-         description: 'Description for image 1',
       },
       {
          id: 2,
-         image: '/2.jpeg',
+         image: 'https://files.realpython.com/media/Flask-by-Example-Setting-up-Postgres-SQLAlchemy-and-Alembic_Watermarked.0cbf10a02bca.jpg',
          title: 'The title of the image 2',
-         description: 'Description for image 2',
       },
       {
          id: 3,
-         image: '3.jpeg',
+         image: 'https://files.realpython.com/media/Creating-A-Location-Based-Web-Application-with-Django-GeoDjango-and-Postgis_Watermarked.2cb08acd38d4.jpg',
          title: 'The title of the image 3',
-         description: 'Description for image 3',
       },
       {
          id: 4,
-         image: '4.jpeg',
+         image: 'https://pbs.twimg.com/media/F48jbYrXoAAcJWy.jpg:large',
          title: 'The title of the image 4',
-         description: 'Description for image 4',
       },
    ];
 
