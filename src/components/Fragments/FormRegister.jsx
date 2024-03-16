@@ -41,7 +41,7 @@ const FormRegister = () => {
          <Card>
             <Card.Title>
                <div>
-                  <h1>Register for new account !</h1>
+                  <h1>Register for new account</h1>
                   <p>
                      Alredy have an account?{' '}
                      <Link
