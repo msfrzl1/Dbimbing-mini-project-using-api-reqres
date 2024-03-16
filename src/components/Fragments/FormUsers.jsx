@@ -22,6 +22,8 @@ const FormUser = () => {
             <div
                key={index}
                className='card'
+               data-aos='flip-left'
+               data-aos-duration='1000'
             >
                <Card>
                   <Card.Title>
