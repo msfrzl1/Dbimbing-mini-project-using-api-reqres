@@ -35,74 +35,79 @@ const FormLogin = () => {
    };
 
    return (
-      <Card>
-         <Card.Title>
-            <div>
-               <h1>Welcome back friend</h1>
-               <p>
-                  Don't have an account?{' '}
-                  <Link
-                     className='link'
-                     to='/register'
-                  >
-                     Register
-                  </Link>
-               </p>
-            </div>
-         </Card.Title>
-         <form onSubmit={handleLogin}>
-            <Card.Body>
-               <div className='mb-3'>
-                  <Label
-                     htmlFor='email'
-                     value='Email'
-                  />
-                  <Input
-                     id='email'
-                     type='email'
-                     name='email'
-                     placeholder='example@me.com'
-                     value={form.email}
-                     onChange={onChange}
-                     required
-                  />
-               </div>
-               <div className='mb-3'>
-                  <Label
-                     htmlFor='password'
-                     value='Password'
-                  />
-                  <Input
-                     id='password'
-                     type='password'
-                     name='password'
-                     placeholder='*******'
-                     value={form.password}
-                     onChange={onChange}
-                     required
-                  />
-               </div>
-               <Link>forgot password?</Link>
-            </Card.Body>
-            <Card.Footer>
-               <Button className='bg-cyan-600 hover:bg-cyan-700'>
-                  <IconLogin />
-                  {loading ? 'Loading...' : 'Login'}
-               </Button>
-               {notif && (
-                  <p
-                     className={
-                        notif === 'Login Success'
-                           ? 'text-green-500 flex items-center justify-center'
-                           : 'text-red-500 flex items-center justify-center'
-                     }
-                  >
-                     {notif}
+      <div
+         data-aos='flip-right'
+         data-aos-duration='1000'
+      >
+         <Card>
+            <Card.Title>
+               <div>
+                  <h1>Welcome back friend</h1>
+                  <p>
+                     Don't have an account?{' '}
+                     <Link
+                        className='link'
+                        to='/register'
+                     >
+                        Register
+                     </Link>
                   </p>
-               )}
-            </Card.Footer>
-         </form>
-      </Card>
+               </div>
+            </Card.Title>
+            <form onSubmit={handleLogin}>
+               <Card.Body>
+                  <div className='mb-3'>
+                     <Label
+                        htmlFor='email'
+                        value='Email'
+                     />
+                     <Input
+                        id='email'
+                        type='email'
+                        name='email'
+                        placeholder='example@me.com'
+                        value={form.email}
+                        onChange={onChange}
+                        required
+                     />
+                  </div>
+                  <div className='mb-3'>
+                     <Label
+                        htmlFor='password'
+                        value='Password'
+                     />
+                     <Input
+                        id='password'
+                        type='password'
+                        name='password'
+                        placeholder='*******'
+                        value={form.password}
+                        onChange={onChange}
+                        required
+                     />
+                  </div>
+                  <Link>forgot password?</Link>
+               </Card.Body>
+               <Card.Footer>
+                  <Button className='bg-cyan-600 hover:bg-cyan-700'>
+                     <IconLogin />
+                     {loading ? 'Loading...' : 'Login'}
+                  </Button>
+                  {notif && (
+                     <p
+                        className={
+                           notif === 'Login Success'
+                              ? 'text-green-500 flex items-center justify-center'
+                              : 'text-red-500 flex items-center justify-center'
+                        }
+                     >
+                        {notif}
+                     </p>
+                  )}
+               </Card.Footer>
+            </form>
+         </Card>
+      </div>
    );
 };
 
